@@ -93,6 +93,7 @@
 				"includedParams": [
 					"minimum_master_nodes",
 					"cluster_name",
+					"network_host",
 					"http_port",
 					"path_data",
 					"path_logs",
@@ -103,10 +104,6 @@
 				{
 					"key" : "node.name",
 					"value" : "${host}"
-				},
-				{
-					"key" : "network.host",
-					"value" : "[\"${host}\", _local_]"
 				}]
 			}
 			],
@@ -136,7 +133,17 @@
 		"required": "true",
 		"type": "string",
 		"configurableInWizard": true,
-		"default": "data-lakes"
+		"default": "es-claster"
+	},
+	{
+		"name": "network_host",
+		"label": "network.host",
+		"description": "Publish this host to other nodes in the cluster",
+		"configName": "network.host",
+		"required": "true",
+		"type": "string",
+		"configurableInWizard": true,
+		"default": "[_local_]"
 	},
 	{
 		"name": "http_port",
