@@ -4,7 +4,7 @@
   "version":            "<VERSION-FULL>",
   "setActiveSymlink":   true,
 
-  "depends": "CDH (>= 5.0), CDH (<< 6.0)",
+  "depends": "CDH (>= 5.0), CDH (<< 10.0)",
   "provides": ["elasticsearch"],
   "scripts": {
     "defines": "es_env.sh"
